@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project 1</title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="data:;base64,iVBORwOKGO=" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>    
+    <!-- Add HTML content, SVG drawing area, ... -->
+    <h1>Project 1: Health in the USA</h1>
+
+    <p id="subtitle"><i>Mary Meineke, University of Cincinnati, Class of 2024</i></p>
+    <div id ="body">
+        <p0> This web app allows the user to view and interact with different aspects of health
+            data in the US. All data is from the CDC's <i>US Heart and Stroke Atlas</i> which can be
+            viewed <a href="https://www.cdc.gov/dhdsp/maps/atlas/index.htm">here</a>.</p>
+    </div>
+
+    <div class="row">
+        <div style="float: right; width: 47.5%;">
+           <label for="Attr2Choice">Attribute #2</label>
+           <select id="Attr2Choice">
+                <option value="poverty_perc">Poverty Percentage</option>
+                <option value="median_household_income">Median Household Income</option>
+                <option value="education_less_than_high_school_percent">Population Percentage below High School Level </option>
+                <option value="air_quality">Air Quality</option>
+                <option value="park_access">Park Access Percentage</option>
+                <option value="percent_inactive">Population Percentage Inactive</option>
+                <option selected="selected" value="percent_smoking">Population Smoking Percentage</option>
+                <option value="elderly_percentage">Population Elderly Percentage</option>
+                <option value="number_of_hospitals">Number of Hospitals</option>
+                <option value="number_of_primary_care_physicians">Number of Primary Care Physicians</option>
+                <option value="percent_no_heath_insurance">Population Percentage withouth Health Insurance</option>
+                <option value="percent_high_blood_pressure">Population High Blood Pressure Percentage</option>
+                <option value="percent_coronary_heart_disease">Population Coronary Heart Disease Percentage</option>
+                <option value="percent_stroke">Population Stroke Percentage</option>
+                <option value="percent_high_cholesterol">Population High Cholesterol Percentage</option>
+                <option value="urban_rural_status">County Type</option>
+           </select> 
+        </div>
+        <div style="float: right; width: 47.5%;">
+            <label for="Attr1Choice">Attribute #1</label>
+            <select id="Attr1Choice">
+                <option value="poverty_perc">Poverty Percentage</option>
+                <option value="median_household_income">Median Household Income</option>
+                <option value="education_less_than_high_school_percent">Population Percentage below High School Level </option>
+                <option value="air_quality">Air Quality</option>
+                <option value="park_access">Park Access Percentage</option>
+                <option value="percent_inactive">Population Percentage Inactive</option>
+                <option value="percent_smoking">Population Smoking Percentage</option>
+                <option selected="selected" value="elderly_percentage">Population Elderly Percentage</option>
+                <option value="number_of_hospitals">Number of Hospitals</option>
+                <option value="number_of_primary_care_physicians">Number of Primary Care Physicians</option>
+                <option value="percent_no_heath_insurance">Population Percentage withouth Health Insurance</option>
+                <option value="percent_high_blood_pressure">Population High Blood Pressure Percentage</option>
+                <option value="percent_coronary_heart_disease">Population Coronary Heart Disease Percentage</option>
+                <option value="percent_stroke">Population Stroke Percentage</option>
+                <option value="percent_high_cholesterol">Population High Cholesterol Percentage</option>
+                <option value="urban_rural_status">County Type</option>
+            </select> 
+         </div>
+    </div>
+
+    <div>
+        <div class="row">
+            <div class="column">
+                <svg id="distribution_1"></svg>
+            </div>
+            <div class="columnMini">
+                <svg id="correlation"></svg>
+            </div>
+            <div class="column">
+                <svg id="distribution_2"></svg>
+            </div>
+        </div>
+        <div class="row">
+            <div class="halfColumn">
+                <svg id="map_1"></svg>
+            </div>
+            <div class="halfColumn">
+                <svg id="map_2"></svg>
+            </div>
+        </div>
+    </div>
+
+    <div id="tooltip"></div>
+    
+
+    <svg height="5" width="5" xmlns="http://www.w3.org/2000/svg" version="1.1"> <defs> <pattern id="lightstripe" patternUnits="userSpaceOnUse" width="5" height="5"> <image xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc1JyBoZWlnaHQ9JzUnPgogIDxyZWN0IHdpZHRoPSc1JyBoZWlnaHQ9JzUnIGZpbGw9J3doaXRlJy8+CiAgPHBhdGggZD0nTTAgNUw1IDBaTTYgNEw0IDZaTS0xIDFMMSAtMVonIHN0cm9rZT0nIzg4OCcgc3Ryb2tlLXdpZHRoPScxJy8+Cjwvc3ZnPg==" x="0" y="0" width="5" height="5"> </image> </pattern> </defs></svg>
+ 
+    <!-- D3 bundle -->
+    <script src="js/d3.v6.min.js"></script>
+    <script src="js/topojson.v3.js"></script>
+
+    <!-- Our JS code - INCLUDING the new files-->
+    <script src="js/main.js"></script>
+    <script src="js/scatterplot.js"></script>
+    <script src="js/histogram.js"></script>
+    <script src="js/mapView.js"></script>
+    
+
+</body>
+</html>

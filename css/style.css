@@ -1,0 +1,82 @@
+h1 {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#subtitle {
+    text-align: center;
+    font-size: medium;
+}
+
+#body {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 2.5%;
+    font-size: large;
+}
+
+.column {
+    float: left;
+    width: 37%;
+}
+
+.columnMini {
+    float: left;
+    width: 26%;
+}
+
+.halfColumn {
+    float: left;
+    width: 50%;
+}
+
+#states {
+    fill: #aaa;
+}
+
+#states .active {
+    display:none;
+}
+
+#state-borders {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 1.5px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    pointer-events: none;
+}
+
+.county-boundary {
+    fill: gray;
+    stroke: #fff;
+    stroke-width: .5px;
+}
+
+.background {
+    fill: none;
+    pointer-events: all;
+}
+
+/* Tooltip */
+#tooltip {
+    position: absolute;
+    display: none;
+    background: #fff;
+    box-shadow: 3px 3px 3px 0px rgb(92 92 92 / 0.5);
+    border: 1px solid #ddd;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 8px;
+    min-width: 160px;
+    color: #333;
+  }
+  .tooltip-title {
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  #tooltip ul {
+    margin: 5px 0 0 0;
+    padding-left: 20px;
+  }
